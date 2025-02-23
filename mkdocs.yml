@@ -1,0 +1,110 @@
+site_name: ''
+site_url: https://alex-automaise.github.io/mkdocs-automaise/ 
+site_author: Alexandre
+copyright: Copyright &copy; 2019 - 2025 Automaise
+
+extra_css:
+  - stylesheets/automaise.css
+
+theme:
+  features:
+    # - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    # - navigation.expand
+    # - navigation.indexes
+    # - toc.follow
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    # - search.share
+    # - header.autohide
+    - announce.dismiss
+  name: material
+  logo_dark_mode: assets/logo-dark.png
+  logo_light_mode: assets/logo-light.png
+  custom_dir: overrides
+  font:
+      text: PT Sans
+      code: Red Hat Mono
+
+  favicon: assets/favicon.ico
+  palette:
+    # Dark Mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Dark mode
+      primary: yellow
+      accent: light blue
+
+    # Light Mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: light-mode
+      toggle:
+        icon: material/weather-night
+        name: Light mode
+      primary: indigo
+      accent: blue
+   
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+plugins:
+  - search:
+  - i18n:
+        docs_structure: suffix
+        fallback_to_default: true
+        reconfigure_material: true
+        reconfigure_search: true
+        languages:
+          - locale: en
+            default: true
+            name: English
+            build: true
+            # site_name: "Documentation (en)"
+          - locale: pt
+            name: Português
+            build: true
+            # site_name: "Documentação em Português (pt)"
+
+extra:
+  consent:
+    title: Cookie Policy
+    description: >- 
+      Automaise uses cookies to improve your browsing experience and for statistical purposes. When browsing you are consenting their use.
+    actions:
+      - accept
+  social:
+    - icon: fontawesome/solid/blog
+      link: https://www.automaise.com/blog/
+    - icon: fontawesome/brands/linkedin 
+      link: https://www.linkedin.com/company/automaise/
+    - icon: fontawesome/brands/youtube 
+      link: https://www.youtube.com/@automaisevideos7956 
+  generator: false
+
+nav:
+  - Automaise OS:
+    - index.md
+    - 👋 Overview:
+      - automaise-os/overview/about-automaise-os.md
+      - Getting Started:
+        - automaise-os/overview/getting-started-with-ai-agent.md
+        - automaise-os/overview/getting-started-with-ai-voice-agent.md
+  - AI Agent Studio:
+    - Flows:
+      - ai-agent-studio/ai-flows/flows-graphs.md
+      - Tools:
+        - ai-agent-studio/ai-flows/flows/tools/invoke-api.md
+      
