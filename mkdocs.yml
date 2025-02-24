@@ -47,7 +47,7 @@ theme:
     - navigation.sections
     - navigation.expand
     - navigation.indexes
-    # - toc.follow
+    - toc.follow
     # - toc.integrate
     - navigation.top
     - search.suggest
