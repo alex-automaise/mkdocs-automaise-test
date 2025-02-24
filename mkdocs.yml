@@ -1,28 +1,16 @@
 site_name: ''
-site_url: https://alex-automaise.github.io/mkdocs-automaise/ 
-site_author: Alexandre
+site_url: https://alex-automaise.github.io/mkdocs-automaise-test/
+repo_url: https://github.com/alex-automaise/mkdocs-automaise-test
+
+docs_dir: docs/
+exclude_docs: overrides/
+
 copyright: Copyright &copy; 2019 - 2025 Automaise
 
 extra_css:
   - stylesheets/automaise.css
 
 theme:
-  features:
-    # - navigation.instant
-    - navigation.instant.progress
-    - navigation.tracking
-    - navigation.tabs
-    - navigation.tabs.sticky
-    - navigation.sections
-    # - navigation.expand
-    # - navigation.indexes
-    # - toc.follow
-    - navigation.top
-    - search.suggest
-    - search.highlight
-    # - search.share
-    # - header.autohide
-    - announce.dismiss
   name: material
   logo_dark_mode: assets/logo-dark.png
   logo_light_mode: assets/logo-light.png
@@ -50,6 +38,23 @@ theme:
         name: Light mode
       primary: indigo
       accent: blue
+  features:
+    # - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    # - toc.follow
+    # - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    # - search.share
+    # - header.autohide
+    - announce.dismiss
    
 markdown_extensions:
   - attr_list
@@ -60,8 +65,22 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
 
+nav:
+  - Automaise OS: 
+    - index.md
+    - 👋 Overview:
+      - automaise-os/overview/about-automaise-os.md
+      - Getting Started:
+        - automaise-os/overview/getting-started-with-ai-agent.md
+        - automaise-os/overview/getting-started-with-ai-voice-agent.md
+  - AI Agent Studio:
+    - Flows:
+      - ai-agent-studio/ai-flows/flows-graphs.md
+      - Tools:
+        - ai-agent-studio/ai-flows/flows/tools/invoke-api.md
+      
 plugins:
-  - search:
+  - search
   - i18n:
         docs_structure: suffix
         fallback_to_default: true
@@ -94,17 +113,3 @@ extra:
       link: https://www.youtube.com/@automaisevideos7956 
   generator: false
 
-nav:
-  - Automaise OS: 
-    - index.md
-    - 👋 Overview:
-      - automaise-os/overview/about-automaise-os.md
-      - Getting Started:
-        - automaise-os/overview/getting-started-with-ai-agent.md
-        - automaise-os/overview/getting-started-with-ai-voice-agent.md
-  - AI Agent Studio:
-    - Flows:
-      - ai-agent-studio/ai-flows/flows-graphs.md
-      - Tools:
-        - ai-agent-studio/ai-flows/flows/tools/invoke-api.md
-      
