@@ -95,7 +95,8 @@ extra:
   generator: false
 
 nav:
-  - Automaise OS: index.md
+  - Automaise OS: 
+    - index.md
     - 👋 Overview:
       - automaise-os/overview/about-automaise-os.md
       - Getting Started:
